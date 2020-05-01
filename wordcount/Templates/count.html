@@ -1,0 +1,14 @@
+<h1>There are {{ count }} words in the sentences.</h1>
+
+<a href="{% url 'home' %}">Start Again</a>
+<h2>Your Text :</h2>
+{{ fulltext }}
+
+<h2>Different words : </h2>
+
+{% for word,total in worddict %}
+
+{{ word }} - {{ total }}
+<br />
+
+{% endfor %}
